@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <script src="./app.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Task Manager</h1>
+    </header>
+    <main>
+      <h2 class="form-header">Create Task</h2>
+      <form id="form">
+        <div class="form-title">
+          <label for="title">Task Title</label>
+          <input type="text" name="title" id="title" />
+        </div>
+        <select name="stat" id="stat">
+          <option value="status" selected disabled>Status</option>
+          <option value="todo">To Do</option>
+          <option value="progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+        <select name="pri" id="pri">
+          <option value="priority" selected disabled>Priority</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button type="submit" class="submit-btn">Create</button>
+      </form>
+      <div class="filtering">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search by title..."
+        />
+        <select name="filter-priority" id="filter-priority">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <select name="sort-order" id="sort-order">
+          <option value="new">Newest First</option>
+          <option value="old">Oldest First</option>
+        </select>
+      </div>
+      <div id="message"></div>
+      <div class="board">
+        <section class="todo-column">
+          <h3 id="todo-header">To Do</h3>
+          <div class="todo-column-container"></div>
+        </section>
+        <section class="in-progress-column">
+          <h3 id="progress-header">In Progress</h3>
+          <div class="in-progress-column-container"></div>
+        </section>
+        <section class="done-column">
+          <h3 id="done-header">Done</h3>
+          <div class="done-column-container"></div>
+        </section>
+      </div>
+      <div id="overlay">
+        <div id="modal">
+          <h3>Edit Task</h3>
+          <input type="text" name="" id="modal-input" />
+          <button id="save" type="button">Save</button>
+          <button id="cancel" type="button">Cancel</button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
