@@ -156,6 +156,9 @@ body {
   .board {
     flex-direction: column;
   }
+  .board section {
+    margin: var(--small);
+  }
   .todo-column,
   .in-progress-column,
   .done-column {
