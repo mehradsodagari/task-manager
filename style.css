@@ -48,10 +48,6 @@ body {
   transition: all 0.2s;
   margin: var(--small);
 }
-.task:hover {
-  box-shadow: 0 0 var(--small) rgba(0, 0, 0, 0.15);
-  transform: scale(1.02);
-}
 #title,
 #search {
   padding: var(--small) var(--medium);
@@ -164,6 +160,63 @@ body {
   .in-progress-column,
   .done-column {
     width: 100%;
+  }
+  #header {
+    text-align: center;
+  }
+  #form {
+    flex-direction: column;
+  }
+  .filtering {
+    flex-direction: column;
+  }
+  #title,
+  #search,
+  #stat,
+  #pri,
+  #filter-priority,
+  #sort-order {
+    width: 80%;
+  }
+  #modal {
+    width: min(90%, 400px);
+  }
+  #modal-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #save,
+  #cancel {
+    margin: var(--small) var(--medium);
+  }
+  #overlay h3 {
+    text-align: center;
+  }
+  .task {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .task button {
+    width: 100%;
+    padding: 0.6rem;
+    margin: 0.25rem 0;
+  }
+  #title,
+  #search,
+  #stat,
+  #pri,
+  #filter-priority,
+  #sort-order,
+  #modal-input {
+    font-size: 16px;
+  }
+}
+@media (hover: hover) {
+  .task:hover {
+    box-shadow: 0 0 var(--small) rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
   }
 }
 .message {
